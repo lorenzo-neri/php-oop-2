@@ -20,14 +20,17 @@ include __DIR__ . '/assets/layout/head.php';
 <div class="container">
     <div class="row">
         <?php foreach ($shop as $product) : ?>
-            <div class="col">
+            <div class="col-4">
                 <div class="card">
                     <img src="<?= $product->image; ?>" class="card-img-top" alt="<?= $product->name; ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $product->name; ?></h5>
                         <h5 class="card-title"><?= $product->category->name; ?></h5>
+                        <h5 class="card-subtitle"><?= $product->category->icon; ?></h5>
                         <h6 class="card-subtitle mb-2 text-muted "><?= $product->price; ?></h6>
                         <p class="card-text"><?= $product->description; ?></p>
+                        <p class="card-text"><?= $product->type; ?></p>
+
                     </div>
                 </div>
             </div>

@@ -8,8 +8,10 @@ if ($debug == true) {
 
 require __DIR__ . '/../models/products.php';
 require __DIR__ . '/../models/categories.php';
+require __DIR__ . '/../models/food.php';
+
 
 $shop = [
     new Product('Product Food Name', '25,00€', new Category('dog', '🐶'), 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/200/300'),
-    new Food('Food Name', '39,90 €', new Category('dog', '🐶'),),
+    new Food('Food Name', '39,90 €', new Category('cat', '🐈'), 'biscuits', 'Meat', 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/200/300'),
 ];
