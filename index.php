@@ -11,6 +11,8 @@ Bonus (non opzionale):
 organizzate il progetto come visto stamattina a lezione usando varie sottocartelle per inserire classi, layout e dati.
 */
 
+include __DIR__ . '/database/dp.php';
+
 include __DIR__ . '/assets/layout/head.php';
 
 ?>

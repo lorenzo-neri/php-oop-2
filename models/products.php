@@ -1,0 +1,19 @@
+<?php
+
+class Product
+{
+    public $name;
+    public $price;
+    public $category;
+    public $description;
+    public $image;
+
+    public function __construct($name, $price, $category, $description, $image)
+    {
+        $this->name = $name;
+        $this->price = $price;
+        $this->category = $category;
+        $this->description = $description;
+        $this->image = $image;
+    }
+}
