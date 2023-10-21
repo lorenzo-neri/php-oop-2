@@ -9,9 +9,11 @@ if ($debug == true) {
 require __DIR__ . '/../models/products.php';
 require __DIR__ . '/../models/categories.php';
 require __DIR__ . '/../models/food.php';
+require __DIR__ . '/../models/game.php';
 
 
 $shop = [
-    new Product('Product Food Name', '25,00€', new Category('dog', '🐶'), 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/200/300'),
-    new Food('Food Name', '39,90 €', new Category('cat', '🐈'), 'biscuits', 'Meat', 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/200/300'),
+    new Product('Product Food Name', '25,00€', new Category('dog', '🐶'), 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=1'),
+    new Food('Food Name', '39,90 €', new Category('cat', '🐈'), 'biscuits', 'Meat', 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=2'),
+    new Game('Small Ball', '4,99 €', new Category('For little pet', '🐈🐶'), 'Play in the park!', 'Plastic Free', 'Lorem ipsum dolor sit amet', 'https://picsum.photos/500/600?random=3')
 ];

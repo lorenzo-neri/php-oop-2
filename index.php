@@ -16,31 +16,38 @@ include __DIR__ . '/database/dp.php';
 include __DIR__ . '/assets/layout/head.php';
 
 ?>
+<main class="bg-success">
+    <div class="container p-5">
+        <h1 class="text-warning text-center">
+            World Animals
+        </h1>
+        <div class="row p-5">
+            <?php foreach ($shop as $product) : ?>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="<?= $product->image; ?>" class="card-img-top" alt="<?= $product->name; ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $product->name; ?></h5>
+                            <h5 class="card-title"><?= $product->category->name; ?></h5>
+                            <h5 class="card-subtitle"><?= $product->category->icon; ?></h5>
+                            <h6 class="card-subtitle mb-2 text-muted "><?= $product->price; ?></h6>
+                            <p class="card-text"><?= $product->description; ?></p>
+                            <?php if ($product instanceof Food) : ?>
+                                <p class="card-text">Type: <?= $product->type; ?></p>
+                                <p class="card-text">Ingredient: <?= $product->mainIngredient; ?></p>
+                            <?php endif; ?>
 
-<div class="container">
-    <div class="row">
-        <?php foreach ($shop as $product) : ?>
-            <div class="col-4">
-                <div class="card">
-                    <img src="<?= $product->image; ?>" class="card-img-top" alt="<?= $product->name; ?>">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $product->name; ?></h5>
-                        <h5 class="card-title"><?= $product->category->name; ?></h5>
-                        <h5 class="card-subtitle"><?= $product->category->icon; ?></h5>
-                        <h6 class="card-subtitle mb-2 text-muted "><?= $product->price; ?></h6>
-                        <p class="card-text"><?= $product->description; ?></p>
-                        <p class="card-text"><?= $product->type; ?></p>
-
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- /.col -->
-        <?php endforeach; ?>
+                <!-- /.col -->
+            <?php endforeach; ?>
+        </div>
+        <!-- /.row -->
     </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
+    <!-- /.container -->
 
+</main>
 <?php
 #FOOTER
 include __DIR__ . '/assets/layout/footer.php'
