@@ -3,6 +3,7 @@
 trait Namable
 {
 
+    public $name;
 
     public function getName(): string
     {
@@ -11,8 +12,8 @@ trait Namable
 
 
     /* Setter */
-    public function setName($new_name)
+    /*    public function setName($new_name)
     {
         $this->name = $new_name;
-    }
+    } */
 }

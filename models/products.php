@@ -8,7 +8,7 @@ class Product
     use Namable;
 
     public $id;
-    public $name;
+    /* public $name; */
     public $price;
     public $category;
     public $description;
