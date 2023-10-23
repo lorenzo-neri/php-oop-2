@@ -13,7 +13,7 @@ require __DIR__ . '/../models/game.php';
 
 
 $shop = [
-    new Product('Product Food Name', '25,00€', new Category('dog', '🐶'), 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=1'),
-    new Food('Food Name', '39,90 €', new Category('cat', '🐈'), 'biscuits', 'Meat', 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=2'),
-    new Game('Small Ball', '4,99 €', new Category('For little pet', '🐈🐶'), 'Play in the park!', 'Plastic Free', 'Lorem ipsum dolor sit amet', 'https://picsum.photos/500/600?random=3')
+    new Product(1, 'Product Food Name', '25,00€', new Category('dog', '🐶'), 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=1'),
+    new Food(2, 'Food Name', '39,90 €', new Category('cat', '🐈'), 'biscuits', 'Meat', 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=2'),
+    new Game(3, 'Small Ball', '4,99 €', new Category('For little pet', '🐈🐶'), 'Play in the park!', 'Plastic Free', 'Lorem ipsum dolor sit amet', 'https://picsum.photos/500/600?random=3')
 ];
