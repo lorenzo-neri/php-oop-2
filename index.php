@@ -36,6 +36,9 @@ include __DIR__ . '/assets/layout/head.php';
                                 <p class="card-text">Type: <?= $product->type; ?></p>
                                 <p class="card-text">Ingredient: <?= $product->mainIngredient; ?></p>
                             <?php endif; ?>
+                            <?php if ($product instanceof Game) : ?>
+                                <p class="card-text">SUPER OFFERTA: <?= $product->discount; ?></p>
+                            <?php endif; ?>
 
                         </div>
                     </div>
