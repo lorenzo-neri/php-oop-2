@@ -12,6 +12,16 @@ require __DIR__ . '/../models/food.php';
 require __DIR__ . '/../models/game.php';
 
 
+#try-catch
+try {
+    $product = new Product(1, '', '19.99', 'Categoria 1', 'Descrizione', 'immagine.jpg');
+} catch (InvalidArgumentException $e) {
+    echo "Errore: " . $e->getMessage();
+    #die;
+}
+
+
+
 $shop = [
     new Product(1, 'Product Food Name', '25,00€', new Category('dog', '🐶'), 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=1'),
     new Food(2, 'Food Name', '39,90 €', new Category('cat', '🐈'), 'biscuits', 'Meat', 'Lorem ipsum dolor sit amet.', 'https://picsum.photos/500/600?random=2'),
