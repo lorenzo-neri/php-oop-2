@@ -1,11 +1,11 @@
 <?php
 
-/* require __DIR__ . '/../traits/namable.php'; */
+require __DIR__ . '/../traits/namable.php';
 
 class Product
 {
 
-    /* use Namable; */
+    use Namable;
 
     public $id;
     public $name;
